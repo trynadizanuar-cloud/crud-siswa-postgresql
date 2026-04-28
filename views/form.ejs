@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <label>NIS</label>
+        <input type="text" name="nis" value="<%= item.nis %>">
+
+        <label>Name</label>
+        <input type="text" name="name" value="<%= item.name %>">
+
+        <label>Address</label>
+        <textarea name="address"><%= item.address %></textarea>
+
+        <button class="btn" type="submit">Simpan</button>
+        <a href="/" class="btn" style="background-color: red;">Cancel</a>
+    </form>
+    <link rel="stylesheet" href="/style.css">
+</body>
+
+</html>

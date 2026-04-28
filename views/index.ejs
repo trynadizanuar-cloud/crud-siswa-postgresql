@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <h1>Daftar Siswa</h1>
+
+    <form action="" method="get">
+        <label>NIS</label>
+        <input type="text" name="nis" value="<%=query.nis%>">
+
+        <label>Name</label>
+        <input type="text" name="name" value="<%=query.name%>">
+
+        <label>Address</label>
+        <input type="text" name="address" value="<%=query.address%>">
+
+        <button class="btn" type="submit">Cari</button>
+        <a href="/" class="btn" style="background-color: hsl(63, 52%, 25%);">Reset</a>
+    </form>
+    <hr>
+
+    <a href="/add" class="btn">Tambah</a>
+    <link rel="stylesheet" href="/fontawosome/css/all.min.css">
+    <table>
+        <tr>
+            <th><i class="fa-solid fa-sort"></i>Nis</th>
+            <th>Nama</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        <% data.forEach(item=> { %>
+            <tr>
+                <td>
+                    <%= item.nis %>
+                </td>
+                <td>
+                    <%= item.nama %>
+                </td>
+                <td>
+                    <%= item.address %>
+                </td>
+                <td>
+                    <a href="/edit/<%= item.nis %>">Edit</a>
+                    <a href="/delete/<%= item.nis %>" onclick="return confirm ('Apakah Anda Yakin ?')">Delete</a>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+
+</body>
+
+</html>
