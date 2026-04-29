@@ -19,13 +19,14 @@
         <label>Address</label>
         <input type="text" name="address" value="<%=query.address%>">
 
-        <button class="btn" type="submit">Cari</button>
-        <a href="/" class="btn" style="background-color: hsl(63, 52%, 25%);">Reset</a>
+        <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Cari</button>
+        <a href="/" class="btn" style="background-color: hsl(63, 52%, 25%);"><i
+                class="fa-solid fa-arrow-rotate-left"></i>Reset</a>
     </form>
     <hr>
 
-    <a href="/add" class="btn">Tambah</a>
-    <link rel="stylesheet" href="/fontawosome/css/all.min.css">
+    <a href="/add" class="btn"> <i class="fa-solid fa-plus"></i>Tambah</a>
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
     <table>
         <tr>
             <th><i class="fa-solid fa-sort"></i>Nis</th>
@@ -39,14 +40,16 @@
                     <%= item.nis %>
                 </td>
                 <td>
-                    <%= item.nama %>
+                    <%= item.name %>
                 </td>
                 <td>
                     <%= item.address %>
                 </td>
                 <td>
-                    <a href="/edit/<%= item.nis %>">Edit</a>
-                    <a href="/delete/<%= item.nis %>" onclick="return confirm ('Apakah Anda Yakin ?')">Delete</a>
+                    <a href="/edit/<%= item.nis %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="/delete/<%= item.nis %>" onclick="return confirm('Yakin?')">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
                 </td>
             </tr>
             <% }) %>
